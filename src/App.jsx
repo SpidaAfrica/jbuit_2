@@ -38,7 +38,7 @@ export default function App() {
     return (
       <>
         <CoursePage theme={theme} mode={mode} priceLabel="₦50,000" onBack={goHome} />
-        <WhatsAppWidget phone="2348012345678" />
+        <WhatsAppWidget phone="2348123888508" />
       </>
     );
   }
@@ -46,7 +46,7 @@ export default function App() {
   return (
     <>
       <HomePage theme={theme} mode={mode} setMode={setMode} goCourse={goCourse} />
-      <WhatsAppWidget phone="2348012345678" />
+      <WhatsAppWidget phone="2348123888508" />
     </>
   );
 }
