@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { THEMES } from "./theme/themes";
 import HomePage from "./pages/HomePage";
 import CoursePage from "./pages/CoursePage";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
@@ -34,8 +35,18 @@ export default function App() {
   }, []);
 
   if (route === "course") {
-    return <CoursePage theme={theme} mode={mode} priceLabel="₦50,000" onBack={goHome} />;
+    return (
+      <>
+        <CoursePage theme={theme} mode={mode} priceLabel="₦50,000" onBack={goHome} />
+        <WhatsAppWidget phone="2348012345678" />
+      </>
+    );
   }
 
-  return <HomePage theme={theme} mode={mode} setMode={setMode} goCourse={goCourse} />;
+  return (
+    <>
+      <HomePage theme={theme} mode={mode} setMode={setMode} goCourse={goCourse} />
+      <WhatsAppWidget phone="2348012345678" />
+    </>
+  );
 }
